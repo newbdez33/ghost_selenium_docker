@@ -1,0 +1,15 @@
+ghost:
+  restart: always
+  build: images/ghost
+  ports:
+    - "80:2368"
+  volumes:
+    - /home/newbdez33/production/ghost_blog_data:/var/lib/ghost
+
+selenium:
+  restart: always
+  build: images/selenium
+  ports:
+    - "4444:4444"
+  volumes:
+    - /dev/shm:/dev/shm
